@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCalculadora.MainPage">
+
+    <Grid
+        Padding="5, 0"
+        BackgroundColor="#4B2DD5"
+        ColumnSpacing="1"
+        RowSpacing="1">
+        <!--Padding sirve para darle cantidad de espacio entre el borde y el contenido del elemento-->
+        <!--El columnSpacing y RowSpacing es el espacio o el tamaño que va tener cada elemento-->
+
+
+            <!--Estas son las medidas para ubicar los botones y el label-->
+            <Grid.RowDefinitions>
+            
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <!--Este label es donde se mostraran todas las operaciones y resultados-->
+        <Label 
+            x:Name="lblNumeros"
+            Grid.Row="0"
+            Grid.ColumnSpan="4"
+            BackgroundColor="#4B2DD5"
+            FontAttributes="Bold"
+            FontSize="50"
+            HorizontalTextAlignment="End"
+            LineBreakMode="NoWrap"
+            Text="0"
+            TextColor="White"
+            VerticalTextAlignment="Center"/>
+
+        <!--Botones Adicionales-->
+            <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Text="AC"
+            Clicked="Limpiar"/>
+
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="Elevar"
+            Text="x²"/>
+        
+        <Button
+            Grid.Row="1"
+            Grid.Column="2"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="Raiz"
+            Text="√"/>
+
+        <Button
+            Grid.Row="5"
+            Grid.ColumnSpan="1"
+            Grid.Column="2"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="Borrar"
+            Text="⌫"/>
+
+        <Button
+            Grid.Row="5"
+            Grid.ColumnSpan="1"
+            Grid.Column="0"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="."/>
+
+        <!--Botones de operaciones-->
+        <Button
+            Grid.Row="1"
+            Grid.Column="3"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeOperacion"
+            Text="÷"/>
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="3"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeOperacion"
+            Text="x"/>
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeOperacion"
+            Text="+"/>
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeOperacion"
+            Text="-"/>
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="Resultado"
+            Text="="/>
+        
+        <!--Botones de números-->
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="9"/>
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="8"/>
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="2"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="7"/>
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="6"/>
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="5"/>
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="4"/>
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="3"/>
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="2"/>
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="1"/>
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="1"
+            Background="#4B2DD5"
+            CornerRadius="20"
+            FontSize="36"
+            Clicked="SeleccionDeNumeros"
+            Text="0"/>
+
+    </Grid>
+
+</ContentPage>
